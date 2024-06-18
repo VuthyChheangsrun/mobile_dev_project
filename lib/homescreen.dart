@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 //
+
+import 'package:flutter/gestures.dart';
+import 'package:flutter/widgets.dart';
 
 class HomesScreen extends StatelessWidget {
   const HomesScreen({super.key});
@@ -9,6 +10,9 @@ class HomesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
+      scrollBehavior: MyCustomScrollBehavior(),
+
       home: Scaffold(
         appBar: AppBar(
           title: Container(
@@ -28,30 +32,26 @@ class HomesScreen extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.elliptical(7, 7)),
               color: Color.fromRGBO(225, 247, 245, 100),
             ),
-            margin: EdgeInsets.all(10),
+            margin: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 60),
+            padding: const EdgeInsets.all(10),
             child: Column(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(10),
+                SizedBox(
                   width: double.infinity,
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
                     child: Image.asset("images/ads1.jpg")),
                 ),
 
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  width: double.infinity,
-                  child: Column(
-                    children: [
-                      const Text("Recommendation"),
-                      Container(),
-                    ],
-                  
-                  ),
-                ),
+                const RowMenu(title: "Recommendation"),
 
-                
+                const RowMenu(title: "Popular"),
+
+                const RowMenu(title: "Top rated"),
+
+                const RowMenu(title: "Sponsor"),
+
+                const RowMenu(title: "Newly added"),
 
               ],
             ),
@@ -64,4 +64,50 @@ class HomesScreen extends StatelessWidget {
   }
 
 
+}
+
+class RowMenu extends StatelessWidget {
+  const RowMenu({
+    super.key,
+    required this.title
+  });
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.only(top: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(title),
+          const SizedBox(height: 5,),
+          SingleChildScrollView (
+            scrollDirection: Axis.horizontal,
+            child: Wrap(
+              spacing: 10,
+              children: [
+              Container(width: 100, height: 100, color: Colors.amber,),
+              Container(width: 100, height: 100, color: Colors.red,),
+              Container(width: 100, height: 100, color: Colors.amber,),
+              Container(width: 100, height: 100, color: Colors.red,),
+              Container(width: 100, height: 100, color: Colors.amber,),
+            ],),
+          ),
+        ],
+      ),
+    );
+  }
+  
+}
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
 }
