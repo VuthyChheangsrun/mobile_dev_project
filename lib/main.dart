@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_dev_project/cart/cartscreen.dart';
 import 'package:mobile_dev_project/homescreen.dart';
 import 'package:mobile_dev_project/foodscreen.dart';
 import 'package:mobile_dev_project/login.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      home: const CartScreen(),
 
     );
   }
