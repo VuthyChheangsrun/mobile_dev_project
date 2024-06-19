@@ -9,11 +9,7 @@ class HomesScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      
-      scrollBehavior: MyCustomScrollBehavior(),
-
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Container(
             margin: const EdgeInsets.symmetric(horizontal: 70),
@@ -57,7 +53,7 @@ class HomesScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      // ),
         
         
     );

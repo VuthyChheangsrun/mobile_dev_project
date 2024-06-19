@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_dev_project/login.dart';
 import 'package:mobile_dev_project/main.dart';
-import 'package:mobile_dev_project/signup.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
   
   @override
   State<StatefulWidget> createState() {
-    return _LoginScreenState();
+    return _SignupScreenState();
   }
 
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
 
   final _formKey = GlobalKey<FormState>();
 
@@ -32,12 +32,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 Image.asset('images/Logo.png', width: 100,),
                 const SizedBox(height: 10,),
 
-                const Text("Welcome Back!!", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                const Text("Welcome!!", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 const SizedBox(height: 10,),
 
+                const InputTextField(text: "Username",),
+                const SizedBox(height: 10,),
                 const InputTextField(text: "Email",),
                 const SizedBox(height: 10,),
                 const InputPWField(text: "Password",),
+                const SizedBox(height: 10,),
+                const InputPWField(text: "Confirm password",),
                 const SizedBox(height: 10,),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 0),
@@ -59,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         );
                       }
                     },
-                    child: const Text('Sign in'),
+                    child: const Text('Sign uo'),
                   ),
                     
                 ),
@@ -73,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Divider(color: Colors.black, )
                     ),       
                     SizedBox(width: 5,),
-                    Text("or Sign in with"),        
+                    Text("or Sign up with"),        
                     SizedBox(width: 5,),
                     Expanded(
                         child: Divider(color: Colors.black,)
@@ -104,14 +108,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("Don't have an account?"),
+                    const Text("Already have an account?"),
                     const SizedBox(width: 4,),
                     InkWell(
-                      child: const Text('Sign up', style: TextStyle(color: Colors.blue),),
+                      child: const Text('Sign in', style: TextStyle(color: Colors.blue),),
                       onTap: () => {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => const SignupScreen()),
+                          MaterialPageRoute(builder: (context) => const LoginScreen()),
                         )
                       }
                     ),
@@ -144,7 +148,7 @@ class InputTextField extends StatelessWidget {
         ),
         validator: (value) {
           if (value == null || value.isEmpty) {
-            return 'Please enter your email';
+            return 'Please enter your email/username';
           }
           return null;
         },
