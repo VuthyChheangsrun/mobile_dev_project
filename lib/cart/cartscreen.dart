@@ -53,29 +53,15 @@ class CartScreen extends StatelessWidget {
               ),
 
               const ItemWidget(
-                image: 'images/food-ads1.jpg',
-                name: "hamburger double",
+                image: 'images/food/f1.jpg',
+                name: "pizzaa",
                 price: "40.00",
                 numofitem: "2"
               ),
 
               const ItemWidget(
-                image: 'images/food-ads1.jpg',
-                name: "hamburger double",
-                price: "40.00",
-                numofitem: "2"
-              ),
-
-              const ItemWidget(
-                image: 'images/food-ads1.jpg',
-                name: "hamburger double",
-                price: "40.00",
-                numofitem: "2"
-              ),
-
-              const ItemWidget(
-                image: 'images/food-ads1.jpg',
-                name: "hamburger double",
+                image: 'images/food/f2.jpg',
+                name: "french fried",
                 price: "40.00",
                 numofitem: "2"
               ),

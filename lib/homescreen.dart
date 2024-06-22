@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         title: Container(
           margin: const EdgeInsets.symmetric(horizontal: 70),
@@ -38,15 +39,200 @@ class HomeScreen extends StatelessWidget {
                   child: Image.asset("images/ads1.jpg")),
               ),
 
-              const RowMenu(title: "Recommendation"),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Recommendation"),
+                    const SizedBox(height: 5,),
+                    SingleChildScrollView (
+                      scrollDirection: Axis.horizontal,
+                      child: Wrap(
+                        spacing: 10,
+                        children: [
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/boiler.jfif")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/freezer.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/3.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/glove.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/1.jpg")),
+                        ),
+                      ],),
+                    ),
+                  ],
+                ),
+              ),
 
-              const RowMenu(title: "Popular"),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Popular"),
+                    const SizedBox(height: 5,),
+                    SingleChildScrollView (
+                      scrollDirection: Axis.horizontal,
+                      child: Wrap(
+                        spacing: 10,
+                        children: [
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/fo----rk.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/1.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/brush.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/5.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/towel.jfif")),
+                        ),
+                      ],),
+                    ),
+                  ],
+                ),
+              ),
 
-              const RowMenu(title: "Top rated"),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Top rated"),
+                    const SizedBox(height: 5,),
+                    SingleChildScrollView (
+                      scrollDirection: Axis.horizontal,
+                      child: Wrap(
+                        spacing: 10,
+                        children: [
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/Jewelry.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/Jewelry2.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/1.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/4.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/boiler.jfif")),
+                        ),
+                      ],),
+                    ),
+                  ],
+                ),
+              ),
 
-              const RowMenu(title: "Sponsor"),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Sponsor"),
+                    const SizedBox(height: 5,),
+                    SingleChildScrollView (
+                      scrollDirection: Axis.horizontal,
+                      child: Wrap(
+                        spacing: 10,
+                        children: [
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/1.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/4.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/3.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/2.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/5.jpg")),
+                        ),
+                      ],),
+                    ),
+                  ],
+                ),
+              ),
 
-              const RowMenu(title: "Newly added"),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text("Newly added"),
+                    const SizedBox(height: 5,),
+                    SingleChildScrollView (
+                      scrollDirection: Axis.horizontal,
+                      child: Wrap(
+                        spacing: 10,
+                        children: [
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/boiler.jfif")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/freezer.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/cable.jpg")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/glove.webp")),
+                        ),
+                        SizedBox(width: 100, height: 100, child: ClipRRect(
+                          borderRadius: const BorderRadius.all(Radius.elliptical(7, 7)),
+                          child: Image.asset("images/normalItem/towel.jfif")),
+                        ),
+                      ],),
+                    ),
+                  ],
+                ),
+              ),
 
             ],
           ),
@@ -81,11 +267,11 @@ class RowMenu extends StatelessWidget {
             child: Wrap(
               spacing: 10,
               children: [
-              Container(width: 100, height: 100, color: Colors.amber,),
-              Container(width: 100, height: 100, color: Colors.red,),
-              Container(width: 100, height: 100, color: Colors.amber,),
-              Container(width: 100, height: 100, color: Colors.red,),
-              Container(width: 100, height: 100, color: Colors.amber,),
+              SizedBox(width: 100, height: 100, child: Image.asset('images/normalItem/sponge.jpg',width: 100, height: 100,),),
+              SizedBox(width: 100, height: 100, child: Image.asset('images/normalItem/freezer.webp',width: 100, height: 100,),),
+              SizedBox(width: 100, height: 100, child: Image.asset('images/normalItem/sponge.jpg',width: 100, height: 100,),),
+              SizedBox(width: 100, height: 100, child: Image.asset('images/normalItem/sponge.jpg',width: 100, height: 100,),),
+              SizedBox(width: 100, height: 100, child: Image.asset('images/normalItem/sponge.jpg',width: 100, height: 100,),),
             ],),
           ),
         ],
@@ -99,7 +285,7 @@ class MyCustomScrollBehavior extends MaterialScrollBehavior {
   // Override behavior methods and getters like dragDevices
   @override
   Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-      };
+    PointerDeviceKind.touch,
+    PointerDeviceKind.mouse,
+  };
 }

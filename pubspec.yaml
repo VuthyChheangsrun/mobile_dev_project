@@ -65,6 +65,23 @@ flutter:
   assets:
     - assets/images/Logo.png
     - assets/images/ads1.jpg
+    - assets/images/normalItem/bandaid.jpg
+    - assets/images/normalItem/boiler.jfif
+    - assets/images/normalItem/brush.jpg
+    - assets/images/normalItem/cable.jpg
+    - assets/images/normalItem/fo----rk.jpg
+    - assets/images/normalItem/freezer.webp
+    - assets/images/normalItem/glove.webp
+    - assets/images/normalItem/sub-buzz.jpg
+    - assets/images/normalItem/towel.jfif
+    - assets/images/normalItem/1.jpg
+    - assets/images/normalItem/2.webp
+    - assets/images/normalItem/3.jpg
+    - assets/images/normalItem/4.webp
+    - assets/images/normalItem/5.jpg
+    - assets/images/food/f1.jpg
+    - assets/images/food/f2.jpg
+    - assets/images/food/foodads2.avif
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

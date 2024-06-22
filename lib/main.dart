@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scrollBehavior: MyCustomScrollBehavior(),
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -42,47 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: NavigationBar(
-      //   onDestinationSelected: (int index) {
-      //     setState(() {
-      //       currentPageIndex = index;
-      //     });
-      //   },
-      //   indicatorColor: Colors.amber,
-      //   selectedIndex: currentPageIndex,
-      //   destinations: const <Widget>[
-      //     NavigationDestination(
-      //       selectedIcon: Icon(Icons.home),
-      //       icon: Icon(Icons.home_outlined),
-      //       label: 'Home',
-      //     ),
-      //     NavigationDestination(
-      //       icon: Icon(Icons.restaurant),
-      //       label: 'Food',
-      //     ),
-      //     NavigationDestination(
-      //       icon: Icon(Icons.shopping_cart),
-      //       label: 'Cart',
-      //     ),
-      //     NavigationDestination(
-      //       icon: Icon(Icons.message),
-      //       label: 'Messages',
-      //     ),
-      //     NavigationDestination(
-      //       icon: Icon(Icons.settings),
-      //       label: 'Settings',
-      //     ),
-      //   ],
-      // ),
-      // body: <Widget>[
-      //   const HomeScreen(),
-      //   const FoodScreen(),
-      //   const CartScreen(),
-      //   const ChatScreen(),
-      //   const SettingScreen()
-      // ][currentPageIndex],
-
-
       bottomNavigationBar: PersistentTabView(
         tabs: [
           PersistentTabConfig(
