@@ -86,7 +86,7 @@ class SettingScreen extends StatelessWidget {
             const SettingBox(name: "Deactivate account"),
             const SizedBox(height: 10,),
 
-            const SettingBox(name: "Logout", destination: LoginScreen(),),
+            const SettingBox(name: "Logout", destination: LoginScreen(), navBar: false,),
           ],
         ),
       ),
